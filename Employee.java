@@ -3,8 +3,8 @@ package JavaProject;
 import JavaProject.Person;
 
 public class Employee extends Person{
-	private int id;
-	private float salary;
+	protected int id;
+	protected float salary;
 	
 	Employee(){
         id = 0;

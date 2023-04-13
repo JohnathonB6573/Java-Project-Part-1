@@ -4,9 +4,9 @@ import JavaProject.SSN;
 import JavaProject.Date;
 
 class Person {
-	private String name, address, email;
-	private SSN ssn;
-	private Date dob;
+	protected String name, address, email;
+	protected SSN ssn;
+	protected Date dob;
 	
 	Person(){
 		name = "";

@@ -1,8 +1,8 @@
 package JavaProject;
 
 public class Date {
-	private char date[];
-	private String data;
+	protected char date[];
+	protected String data;
 	
 	public Date(String dt) {
 		try {
