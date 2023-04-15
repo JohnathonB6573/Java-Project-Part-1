@@ -1,6 +1,4 @@
-package JavaProject;
-
-import JavaProject.Person;
+package People;
 
 public class Employee extends Person{
 	protected int id;

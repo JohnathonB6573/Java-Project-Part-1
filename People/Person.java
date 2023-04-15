@@ -1,7 +1,7 @@
-package JavaProject;
+package People;
 
-import JavaProject.SSN;
-import JavaProject.Date;
+import Other.SSN;
+import Other.Date;
 
 class Person {
 	protected String name, address, email;

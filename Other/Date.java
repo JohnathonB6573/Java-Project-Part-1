@@ -1,4 +1,4 @@
-package JavaProject;
+package Other;
 
 public class Date {
 	protected char date[];
