@@ -7,21 +7,24 @@ class Person {
 	protected String name, address, email;
 	protected SSN ssn;
 	protected Date dob;
+	protected float balance;
 	
-	Person(){
+	Person(){//default constructor sets everything to 0 and blanks
 		name = "";
 		address = "";
 		email = "";
 		ssn = new SSN("000-00-0000");
 		dob = new Date("00/00/0000");
+		balance = 0.0f;
 	}
 	
-	public Person(String name,String address,String email,SSN ssn,Date date) {
+	public Person(String name,String address,String email,SSN ssn,Date date, float balance) {//sets the different variables
 		this.name = name;
 		this.address = address;
 		this.email = email;
 		this.ssn = ssn;
 		this.dob = date;
+		this.balance = balance;
 	}
 	
 	public void setName(String name){
@@ -43,6 +46,7 @@ class Person {
 	public void setSSN(SSN ssn) {
 		this.ssn = ssn;
 	}
+	public void setBalance(float balance){this.balance = balance;}
 	
 	public String getName() {
 		return name;
@@ -51,6 +55,7 @@ class Person {
 	public String getAddress() {
 		return address;
 	}
+	public float getBalace(){return balance;}
 	
 	public Date getDate() {
 		return dob;
