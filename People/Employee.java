@@ -3,18 +3,19 @@ package People;
 public class Employee extends Person{
 	protected int id;
 	protected float salary;
-	
+
 	Employee(){
         id = 0;
         salary = 0;
     }
-	
+
 	public Employee(Person p) {
 		super.setName(p.getName());
         super.setAddress(p.getAddress());
         super.setEmail(p.getEmail());
         super.setSSN(p.getSSN());
         super.setDate(p.getDate());
+        super.setBalance(p.getBalance());
 	}
 	
 	public void setID(int id){
@@ -39,5 +40,6 @@ public class Employee extends Person{
         System.out.println("Email: "+ getEmail());
         System.out.println("SSN: "+ getSSN1());
         System.out.println("Dob: "+ getDate1());
+        System.out.println("Balance:"+ getBalance());
     }
 }

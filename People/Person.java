@@ -55,7 +55,7 @@ class Person {
 	public String getAddress() {
 		return address;
 	}
-	public float getBalace(){return balance;}
+	public float getBalance(){return balance;}
 	
 	public Date getDate() {
 		return dob;
