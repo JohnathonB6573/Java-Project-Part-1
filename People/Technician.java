@@ -34,5 +34,11 @@ public class Technician extends Employee{
         System.out.println("ID: "+ getID());
     }
 
+    //Sort collections
+
+    //Insert collections
+
+    //Collections need to be organized in an arraylist one for everything in the
+    //library and one for specific types of collections
 }
 

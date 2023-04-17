@@ -33,14 +33,30 @@ public class Librarian extends Employee{
         System.out.println("ID: "+ getID());
     }
 
-    //Search Collection by idNumber
+    //Search collection by idNumber
 
-    //Search
+    //Search checked out collections
 
-    //Serach books by author
+    //search checked in collections
 
-    //Search Collection by title
+    //Search collections by author
 
-    //Search Collection by author
+    //Search collection by title
+
+    //Search collection by price
+
+    //Search for fiction or non-fiction
+
+    //Search by section
+
+    //Search by publicationDate
+
+    //Search who has collection
+
+    //Search who has membership
+
+    //Implement a new membership
+
+    //Stop membership
 }
 
