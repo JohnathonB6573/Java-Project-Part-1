@@ -19,6 +19,15 @@ public class Collection {
         this.price = 0;
     }
 
+    //Constructor
+    Collection(String title,Date publicationDate,String section,String author, double price){
+        this.title = title;
+        this.publicationDate = publicationDate;
+        this.section = section;
+        this.author = author;
+        this.price = price;
+    }
+
     //public void setID(String id) {
     //	try {
 	//		if(id.length()==6) {

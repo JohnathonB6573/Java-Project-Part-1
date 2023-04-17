@@ -5,7 +5,7 @@ public class Book extends Collection {
     protected String ISBN;
 
     public Book(){
-        this.idNumber = "";
+        //this.idNumber = "";
         this.ISBN = "";
         this.title = "";
         this.publicationDate = new Date("00/00/0000");
