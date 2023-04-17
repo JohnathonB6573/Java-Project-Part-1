@@ -7,6 +7,7 @@ public abstract class Collection {
     protected Date publicationDate;
     protected String section, author;
     protected float price;
+    protected boolean isCheckedOut;
 
     public int getID() {
         return this.idNumber;
@@ -27,6 +28,10 @@ public abstract class Collection {
     public String getSection() {
         return this.section;
     }
+
+    public boolean getIsCheckedOut(){return this.isCheckedOut;}
+
+    public void setIsCheckedOut(boolean check){this.isCheckedOut = check; }
 
     public void setSection(String section) {
         this.section = section;
