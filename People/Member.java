@@ -45,7 +45,7 @@ public class Member extends Person {
         this.numOfBooks=numOfBooks;
     }
 
-    public float getNumOfBooks(){
+    public int getNumOfBooks(){
         return numOfBooks;
     }
 
