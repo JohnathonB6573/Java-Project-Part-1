@@ -61,6 +61,49 @@ class ProjectMain{
 
     };
     public static void newCollectionEvent(){
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Enter Collection info: ");
+        System.out.print("Enter Collection Type: (Book, DVD, Journal, or Newspaper)");
+
+        String collectionType = scn.nextLine();
+        switch(collectionType){
+            case "Book", "book":
+                System.out.print("Enter Book Name: ");
+                String bookName = scn.nextLine();
+
+                System.out.print("Enter Book Author: ");
+                String bookAuthor = scn.nextLine();
+
+                System.out.print("Enter Book ISBN: ");
+                String bookISBN = scn.nextLine();
+
+        }
+
+        System.out.print("Enter Member Address: ");
+        String address = scn.nextLine();
+
+        System.out.print("Enter Member Date of Birth: ");
+        Date date = new Date(scn.nextLine());
+
+
+        System.out.print("Enter Member email: ");
+        String email = scn.nextLine();
+
+        System.out.print("Enter Member SSN: ");
+        SSN ssn = new SSN(scn.nextLine());
+
+        System.out.print("Enter Membership type (Student/Professor/External): ");
+        String membershipType = scn.nextLine();
+
+        System.out.print("Creating a new member...");
+        Member mem = new Member(name, address, email, ssn, date, membershipType);
+
+        System.out.print("The membership ID is: "+mem.getID());
+        //Save the new member into the membership database
+        mem.saveTo("membershipdatabasefile.txt");
+        System.out.println("\nNew Member Successfully Saved to file."); 
+
+
         
     };
 
