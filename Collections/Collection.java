@@ -10,6 +10,8 @@ public class Collection {
     protected String section, author;
     protected double price;
 
+    protected boolean isCheckedOut;
+
     //Default Constructor
     Collection(){
         this.title = " ";
@@ -17,6 +19,7 @@ public class Collection {
         this.section = " ";
         this.author = " ";
         this.price = 0;
+        this.isCheckedOut = false;
     }
 
     //Constructor
@@ -26,6 +29,7 @@ public class Collection {
         this.section = section;
         this.author = author;
         this.price = price;
+        this.isCheckedOut = false;
     }
 
     //public void setID(String id) {
@@ -47,6 +51,9 @@ public class Collection {
         return this.title;
     }
 
+    public boolean getIsCheckedOut(){
+        return this.isCheckedOut;
+    }
     public Date getPubDate() {
         return this.publicationDate;
     }
@@ -67,6 +74,10 @@ public class Collection {
 
     public void setPrice(double d){
         this.price = d;
+    }
+
+    public void setCheckedOut(boolean isCheck){
+        this.isCheckedOut = isCheck;
     }
 
     public void setAuthor(String s){

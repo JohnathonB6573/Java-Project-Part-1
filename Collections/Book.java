@@ -14,7 +14,7 @@ public class Book extends Collection {
         this.price = 0.0;
     }
 
-    public Book(String id, String ISBN, String title, String publicationDate, String section, String author, Double price)
+    public Book(String ISBN, String title, String publicationDate, String section, String author, Double price)
     {
         this.ISBN = ISBN;
         this.title = title;
@@ -22,12 +22,15 @@ public class Book extends Collection {
         this.section = section;
         this.author = author;
         this.price = price;
-
-        setID(id);
     }
 
-    String getISBN(){
+    public String getISBN(){
         return this.ISBN;
     }
+    public void setISBN(String isbn){
+        this.ISBN = isbn;
+    }
+
+
 
 }
