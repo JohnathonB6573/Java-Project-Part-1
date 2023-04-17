@@ -3,10 +3,10 @@ package Collections;
 import Other.Date;
 
 public abstract class Collection {
-    private int idNumber;
-    private Date publicationDate;
-    private String section, author;
-    private float price;
+    protected int idNumber;
+    protected Date publicationDate;
+    protected String section, author;
+    protected float price;
 
     public int getID() {
         return this.idNumber;
