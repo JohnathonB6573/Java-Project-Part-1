@@ -5,7 +5,7 @@ public class DVD extends Collection {
     protected String ISBN;
 
     public DVD(){
-        this.idNumber = "";
+        //this.idNumber = "";
         this.ISBN = "";
         this.publicationDate = new Date("00/00/0000");
         this.section = "";
@@ -13,7 +13,7 @@ public class DVD extends Collection {
         this.price = 0.0;
     }
 
-    public DVD(String id, String ISBN, String title, String publicationDate, String section, String author, Double price)
+    public DVD(String ISBN, String title, String publicationDate, String section, String author, Double price)
     {
         this.ISBN = ISBN;
         this.title = title;
@@ -21,12 +21,13 @@ public class DVD extends Collection {
         this.section = section;
         this.author = author;
         this.price = price;
-
-        setID(id);
     }
 
     String getISBN(){
         return this.ISBN;
+    }
+    public void setISBN(String isbn){
+        this.ISBN = isbn;
     }
     
 }

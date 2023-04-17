@@ -116,7 +116,7 @@ class ProjectMain{
                 System.out.print("Enter DVD Price: ");
                 Double dvdPrice = scn.nextDouble();
 
-                DVD dvd = new DVD(dvdID, dvdISBN, dvdName, dvdPublication, dvdSection, dvdAuthor, dvdPrice);
+                DVD dvd = new DVD(dvdISBN, dvdName, dvdPublication, dvdSection, dvdAuthor, dvdPrice);
 
                 dvd.saveTo("collectionDatabaseFile.txt");
                 System.out.println("\nNew DVD Successfully Saved to file.");
@@ -143,7 +143,7 @@ class ProjectMain{
                 System.out.print("Enter Journal Price: ");
                 Double journalPrice = scn.nextDouble();
 
-                Journal journal = new Journal(journalID, journalISBN, journalName, journalPublication, journalSection, journalAuthor, journalPrice);
+                Journal journal = new Journal(journalISBN, journalName, journalPublication, journalSection, journalAuthor, journalPrice);
 
                 journal.saveTo("collectionDatabaseFile.txt");
                 System.out.println("\nNew Journal Successfully Saved to file.");
@@ -170,7 +170,7 @@ class ProjectMain{
                 System.out.print("Enter Newspaper Price: ");
                 Double newspaperPrice = scn.nextDouble();
 
-                Newspaper newspaper = new Newspaper(newspaperID, newspaperISBN, newspaperName, newspaperPublication, newspaperSection, newspaperAuthor, newspaperPrice);
+                Newspaper newspaper = new Newspaper(newspaperISBN, newspaperName, newspaperPublication, newspaperSection, newspaperAuthor, newspaperPrice);
 
                 newspaper.saveTo("collectionDatabaseFile.txt");
                 System.out.println("\nNew Newspaper Successfully Saved to file.");
