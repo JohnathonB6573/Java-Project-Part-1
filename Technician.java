@@ -36,10 +36,5 @@ public class Technician extends Employee{
         System.out.println("ID: "+ getID());
     }
 
-
-   // public static void main(String[] args) {
-     //   Technician John = new Technician();
-      //  John.printInfo();
-    //}
 }
 
