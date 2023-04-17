@@ -192,8 +192,14 @@ class ProjectMain{
     //You are free to implememnt other events that you see needs to be implemented
 
     public static void main(String [] args){
+        /*
+        steps that the main is going to do:
+        ask for a name and id number inorder to login (we are going to searilize the differnt id numbers, names, and other people variables)
+        specifiic dialog pops up depening on what job the person has
+        they would go through the different options and after a task is complete would exit out of the database
+         */
         ProjectMain.mainMenu();
-
+        System.out.println("Enter your username to login:");
         System.out.print("Enter your option number: ");
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
