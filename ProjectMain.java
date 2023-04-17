@@ -71,13 +71,112 @@ class ProjectMain{
                 System.out.print("Enter Book Name: ");
                 String bookName = scn.nextLine();
 
+                System.out.print("Enter Unique Collection ID");
+                String bookID = scn.nextLine();
+
                 System.out.print("Enter Book Author: ");
                 String bookAuthor = scn.nextLine();
 
                 System.out.print("Enter Book ISBN: ");
                 String bookISBN = scn.nextLine();
 
+                System.out.print("Enter Book Publication Date: ");
+                String bookPublication = scn.nextLine();
+
+                System.out.print("Enter Book Section: ");
+                String bookSection = scn.nextLine();
+
+                System.out.print("Enter Book Price: ");
+                Double bookPrice = scn.nextDouble();
+
+                Book book = new Book(bookID, bookISBN, bookName, bookPublication, bookSection, bookAuthor, bookPrice);
+
+                book.saveTo("bookDatabaseFile.txt");
+                System.out.println("\nNew Book Successfully Saved to file.");
+                break;
+            case "DVD", "dvd":
+                System.out.print("Enter DVD Name: ");
+                String dvdName = scn.nextLine();
+
+                System.out.print("Enter Unique Collection ID");
+                String dvdID = scn.nextLine();
+
+                System.out.print("Enter DVD Author: ");
+                String dvdAuthor = scn.nextLine();
+
+                System.out.print("Enter DVD ISBN: ");
+                String dvdISBN = scn.nextLine();
+
+                System.out.print("Enter DVD Publication Date: ");
+                String dvdPublication = scn.nextLine();
+
+                System.out.print("Enter DVD Section: ");
+                String dvdSection = scn.nextLine();
+
+                System.out.print("Enter DVD Price: ");
+                Double dvdPrice = scn.nextDouble();
+
+                DVD dvd = new DVD(dvdID, dvdISBN, dvdName, dvdPublication, dvdSection, dvdAuthor, dvdPrice);
+
+                dvd.saveTo("collectionDatabaseFile.txt");
+                System.out.println("\nNew DVD Successfully Saved to file.");
+                break;
+            case "Journal", "journal":
+                System.out.print("Enter Journal Name: ");
+                String journalName = scn.nextLine();
+
+                System.out.print("Enter Unique Collection ID");
+                String journalID = scn.nextLine();
+
+                System.out.print("Enter Journal Author: ");
+                String journalAuthor = scn.nextLine();
+
+                System.out.print("Enter Journal ISBN: ");
+                String journalISBN = scn.nextLine();
+
+                System.out.print("Enter Journal Publication Date: ");
+                String journalPublication = scn.nextLine();
+
+                System.out.print("Enter Journal Section: ");
+                String journalSection = scn.nextLine();
+
+                System.out.print("Enter Journal Price: ");
+                Double journalPrice = scn.nextDouble();
+
+                Journal journal = new Journal(journalID, journalISBN, journalName, journalPublication, journalSection, journalAuthor, journalPrice);
+
+                journal.saveTo("collectionDatabaseFile.txt");
+                System.out.println("\nNew Journal Successfully Saved to file.");
+                break;
+            case "Newspaper", "newspaper":
+                System.out.print("Enter Newspaper Name: ");
+                String newspaperName = scn.nextLine();
+
+                System.out.print("Enter Unique Collection ID");
+                String newspaperID = scn.nextLine();
+
+                System.out.print("Enter Newspaper Author: ");
+                String newspaperAuthor = scn.nextLine();
+
+                System.out.print("Enter Newspaper ISBN: ");
+                String newspaperISBN = scn.nextLine();
+
+                System.out.print("Enter Newspaperl Publication Date: ");
+                String newspaperPublication = scn.nextLine();
+
+                System.out.print("Enter Newspaper Section: ");
+                String newspaperSection = scn.nextLine();
+
+                System.out.print("Enter Newspaper Price: ");
+                Double newspaperPrice = scn.nextDouble();
+
+                Newspaper newspaper = new Newspaper(newspaperID, newspaperISBN, newspaperName, newspaperPublication, newspaperSection, newspaperAuthor, newspaperPrice);
+
+                newspaper.saveTo("collectionDatabaseFile.txt");
+                System.out.println("\nNew Newspaper Successfully Saved to file.");
+                break;
         }
+
         
     };
 
