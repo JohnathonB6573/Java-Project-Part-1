@@ -1,9 +1,7 @@
-package JavaProject;
+package People;
 
-import JavaProject.Person;
-import JavaProject.SSN;
-import JavaProject.Date;
-import JavaProject.Employee;
+import Other.SSN;
+import Other.Date;
 public class Librarian extends Employee{
 
     Librarian(){
