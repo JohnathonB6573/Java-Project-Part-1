@@ -1,6 +1,5 @@
 package People;
-import Other.SSN;
-import Other.Date;
+import Other.*;
 public class Librarian extends Employee{
     Librarian(){
         id = 0;

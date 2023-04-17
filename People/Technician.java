@@ -1,7 +1,6 @@
 
 package People;
-import Other.SSN;
-import Other.Date;
+import Other.*;
 public class Technician extends Employee{
     Technician(){
         id = 0;
