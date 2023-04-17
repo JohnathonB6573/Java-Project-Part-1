@@ -37,6 +37,10 @@ public class Member extends Person {
         this.membershipType = membershipType;
     }
 
+    public void setID(int id){
+        this.id = id;
+    }
+
     public int getID(){
         return id;
     }
