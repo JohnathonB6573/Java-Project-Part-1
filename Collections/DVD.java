@@ -11,6 +11,7 @@ public class DVD extends Collection {
         this.section = "";
         this.author = "";
         this.price = 0.0;
+        this.title = "";
     }
 
     public DVD(String ISBN, String title, String publicationDate, String section, String author, Double price)

@@ -10,6 +10,8 @@ public class Newspaper extends Collection{
         this.section = "";
         this.author = "";
         this.price = 0.0;
+        this.title = "";
+        this.ISSN = "";
     }
 
     public Newspaper(String ISSN, String title, String publicationDate, String section, String author, Double price)
