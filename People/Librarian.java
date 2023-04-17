@@ -23,7 +23,6 @@ public class Librarian extends Employee{
         super.setSalary((int)e.getSalary());
         super.setID(e.getID());
     }
-
     public void printInfo(){
         System.out.println("Name: "+ getName());
         System.out.println("Address: "+ getAddress());
@@ -33,4 +32,15 @@ public class Librarian extends Employee{
         System.out.println("Salary: "+ getSalary());
         System.out.println("ID: "+ getID());
     }
+
+    //Search Collection by idNumber
+
+    //Search
+
+    //Serach books by author
+
+    //Search Collection by title
+
+    //Search Collection by author
 }
+

@@ -3,17 +3,23 @@ package Collections;
 import Other.Date;
 
 public abstract class Collection {
-    protected int idNumber;
     protected Date publicationDate;
-    protected String section, author;
+    protected String section, author, idNumber;
     protected float price;
+    protected boolean isCheckedOut;
 
-    public int getID() {
+    public String getID() {
         return this.idNumber;
     }
 
-    public void setID(int idNumber) {
-        this.idNumber = idNumber;
+    public void setID(String id) {
+    	try {
+		if(id.length()==6) {
+			this.idNumber = id;
+		}
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
     }
 
     public Date getPubDate() {
@@ -27,6 +33,10 @@ public abstract class Collection {
     public String getSection() {
         return this.section;
     }
+
+    public boolean getIsCheckedOut(){return this.isCheckedOut;}
+
+    public void setIsCheckedOut(boolean check){this.isCheckedOut = check; }
 
     public void setSection(String section) {
         this.section = section;
@@ -44,7 +54,7 @@ public abstract class Collection {
         return this.price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 }
