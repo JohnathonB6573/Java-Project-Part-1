@@ -2,14 +2,20 @@ package Collections;
 
 import Other.Date;
 
-public abstract class Collection {
-    private int idNumber;
-    private Date publicationDate;
-    private String section, author;
-    private float price;
+public class Collection {
+    protected int idNumber;
+    protected String title;
+    protected Date publicationDate;
+    protected String section, author;
+    protected double price;
+
 
     public int getID() {
         return this.idNumber;
+    }
+
+    public String getTitle(){
+        return this.title;
     }
 
     public Date getPubDate() {
@@ -24,7 +30,7 @@ public abstract class Collection {
         return this.author;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return this.price;
     }
 }
