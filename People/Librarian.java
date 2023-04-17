@@ -10,6 +10,7 @@ public class Librarian extends Employee{
         email = "";
         ssn = new SSN("000-00-0000");
         dob = new Date("00/00/0000");
+        balance = 0;
     }
     Librarian(Employee e){
         super.setName(e.getName());
@@ -44,4 +45,5 @@ public class Librarian extends Employee{
     //Search who has membership
     //Implement a new membership
     //Stop membership
+    //Check out books this will assign books to people
 }
