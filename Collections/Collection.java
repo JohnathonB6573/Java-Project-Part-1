@@ -13,12 +13,12 @@ public abstract class Collection {
 
     public void setID(String id) {
     	try {
-			if(id.length()==6) {
-				this.idNumber = id;
-			}
-		} catch(Exception e) {
-			e.printStackTrace();
+		if(id.length()==6) {
+			this.idNumber = id;
 		}
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
     }
 
     public Date getPubDate() {
@@ -49,7 +49,7 @@ public abstract class Collection {
         return this.price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 }
