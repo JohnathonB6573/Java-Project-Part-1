@@ -10,6 +10,7 @@ public class Technician extends Employee{
         email = "";
         ssn = new SSN("000-00-0000");
         dob = new Date("00/00/0000");
+        balance = 0;
     }
     Technician(Employee e){
         super.setName(e.getName());
@@ -21,15 +22,7 @@ public class Technician extends Employee{
         super.setSalary((int)e.getSalary());
         super.setID(e.getID());
     }
-    public void printInfo(){
-        System.out.println("Name: "+ getName());
-        System.out.println("Address: "+ getAddress());
-        System.out.println("Email: "+ getEmail());
-        System.out.println("SSN: "+ getSSN1());
-        System.out.println("Dob: "+ getDate1());
-        System.out.println("Salary: "+ getSalary());
-        System.out.println("ID: "+ getID());
-    }
+
 
     //Sort collections
     //Insert collections
