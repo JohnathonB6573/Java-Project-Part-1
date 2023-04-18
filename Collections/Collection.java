@@ -1,6 +1,6 @@
 package Collections;
 
-import Other.*;
+import java.util.*;
 import java.text.*;
 
 public class Collection {
@@ -16,14 +16,14 @@ public class Collection {
     //Default Constructor
     Collection(){
         this.title = " ";
-        this.publicationDate = new Date("00/00/0000");
+        this.publicationDate = new Date();
         this.section = " ";
         this.author = " ";
         this.price = 0;
         this.isCheckedOut = false;
         this.renterName = "";
         this.renterID = "";
-        this.checkoutDate = new Date("00/00/0000");
+        this.checkoutDate = new Date();
     }
 
     //Constructor
@@ -36,7 +36,7 @@ public class Collection {
         this.isCheckedOut = false;
         this.renterName = "";
         this.renterID = "";
-        this.checkoutDate = new Date("00/00/0000");
+        this.checkoutDate = new Date();
     }
 
     //public void setID(String id) {
