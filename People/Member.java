@@ -4,7 +4,7 @@ import Other.*;
 
 
 public class Member extends Person {
-    protected int id;//id for the member
+    //protected int id;//id for the member
     protected int numOfBooks;//how many books they have checked out
     protected String membershipType;
     protected int idCount = 1; // keep track of IDs. make sure each member has unique ID
@@ -19,7 +19,7 @@ public class Member extends Person {
         ssn = new SSN("000-00-0000");
 		dob = new Date("00/00/0000");
         id = idCount;
-        idCount++; //add one to id count after each member initialization
+        //idCount++; //add one to id count after each member initialization
         numOfBooks = 0;
         //balance = 0;
     }
@@ -68,4 +68,5 @@ public class Member extends Person {
 
         
     }
+    //All members should be able to request collections, get information about collections, check overdue books, and pay fees.
 }
