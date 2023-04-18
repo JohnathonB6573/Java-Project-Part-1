@@ -21,15 +21,7 @@ public class Librarian extends Employee{
         super.setSalary((int)e.getSalary());
         super.setID(e.getID());
     }
-    public void printInfo(){
-        System.out.println("Name: "+ getName());
-        System.out.println("Address: "+ getAddress());
-        System.out.println("Email: "+ getEmail());
-        System.out.println("SSN: "+ getSSN1());
-        System.out.println("Dob: "+ getDate1());
-        System.out.println("Salary: "+ getSalary());
-        System.out.println("ID: "+ getID());
-    }
+
 
     //Search collection by idNumber
     //Search checked out collections
