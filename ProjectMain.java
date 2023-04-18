@@ -51,7 +51,7 @@ class ProjectMain{
         String membershipType = scn.nextLine();
 
         System.out.print("Creating a new member...");
-        Member mem = new Member(name, address, email, ssn, date, membershipType);
+        Member mem = new Member(name, id,address, email, ssn, date, membershipType);
 
         System.out.print("The membership ID is: "+mem.getID());
         //Save the new member into the membership database

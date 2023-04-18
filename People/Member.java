@@ -7,7 +7,7 @@ public class Member extends Person {
     //protected int id;//id for the member
     protected int numOfBooks;//how many books they have checked out
     protected String membershipType;
-    protected int idCount = 1; // keep track of IDs. make sure each member has unique ID
+    //protected int idCount = 1; // keep track of IDs. make sure each member has unique ID (this should only be useful for the librian)
     //protected float balance; //every person should have a balance
     
 
@@ -18,16 +18,16 @@ public class Member extends Person {
         email = "";
         ssn = new SSN("000-00-0000");
 		dob = new Date("00/00/0000");
-        id = idCount;
+        id = "";
         //idCount++; //add one to id count after each member initialization
         numOfBooks = 0;
         //balance = 0;
     }
 
 
-    public Member(String name,String address,String email,SSN ssn,Date date, String membershipType)
+    public Member(String name,String id, String address,String email,SSN ssn,Date date, String membershipType)
     {
-        this.id = idCount; //member given unique ID
+        this.id = id; //member given unique ID
         //idCount++; //add one to id count after each member initialization
         this.name = name;
         this.address = address;
@@ -37,11 +37,11 @@ public class Member extends Person {
         this.membershipType = membershipType;
     }
 
-    public void setID(int id){
+    public void setID(String id){
         this.id = id;
     }
 
-    public int getID(){
+    public String getID(){
         return id;
     }
 
