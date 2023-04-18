@@ -28,7 +28,7 @@ public class Member extends Person {
     public Member(String name,String address,String email,SSN ssn,Date date, String membershipType)
     {
         this.id = idCount; //member given unique ID
-        idCount++; //add one to id count after each member initialization
+        //idCount++; //add one to id count after each member initialization
         this.name = name;
         this.address = address;
         this.email = email;
