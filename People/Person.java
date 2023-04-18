@@ -4,7 +4,7 @@ import Other.SSN;
 import Other.Date;
 
 class Person {
-	protected String name, address, email;
+	protected String name, address, email, id;
 	protected SSN ssn;
 	protected Date dob;
 	protected float balance;
@@ -16,10 +16,13 @@ class Person {
 		ssn = new SSN("000-00-0000");
 		dob = new Date("00/00/0000");
 		balance = 0.0f;
+		id = "";
+
 	}
 	
-	public Person(String name,String address,String email,SSN ssn,Date date, float balance) {//sets the different variables
+	public Person(String name,String id, String address,String email,SSN ssn,Date date, float balance) {//sets the different variables
 		this.name = name;
+		this.id = id;
 		this.address = address;
 		this.email = email;
 		this.ssn = ssn;
@@ -30,6 +33,7 @@ class Person {
 	public void setName(String name){
         this.name = name;
     }
+	public void setId(String id){this.id = id;}
 	
 	public void setAddress(String address) {
 		this.address = address;
@@ -51,6 +55,7 @@ class Person {
 	public String getName() {
 		return name;
 	}
+	public String setId(){return id;}
 	
 	public String getAddress() {
 		return address;

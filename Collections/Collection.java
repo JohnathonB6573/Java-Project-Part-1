@@ -1,34 +1,78 @@
 package Collections;
 
-import Other.Date;
+import java.util.*;
+import java.text.*;
 
 public class Collection {
 
-    protected String idNumber;
+    //protected String idNumber;
     protected String title;
-    protected Date publicationDate;
-    protected String section, author;
+    protected Date publicationDate, checkoutDate;
+    protected String section, author, renterName, renterID;
     protected double price;
 
+    protected boolean isCheckedOut;
 
-    public void setID(String id) {
-    	try {
-			if(id.length()==6) {
-				this.idNumber = id;
-			}
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
+    //Default Constructor
+    Collection(){
+        this.title = " ";
+        this.publicationDate = new Date();
+        this.section = " ";
+        this.author = " ";
+        this.price = 0;
+        this.isCheckedOut = false;
+        this.renterName = "";
+        this.renterID = "";
+        this.checkoutDate = new Date();
     }
 
-    public String getID() {
-        return this.idNumber;
+    //Constructor
+    Collection(String title,Date publicationDate,String section,String author, double price){
+        this.title = title;
+        this.publicationDate = publicationDate;
+        this.section = section;
+        this.author = author;
+        this.price = price;
+        this.isCheckedOut = false;
+        this.renterName = "";
+        this.renterID = "";
+        this.checkoutDate = new Date();
     }
 
+    //public void setID(String id) {
+    //	try {
+	//		if(id.length()==6) {
+	//			this.idNumber = id;
+	//		}
+	//	} catch(Exception e) {
+	//		e.printStackTrace();
+	//	}
+    //}
+
+    //public String getID() {
+       // return this.idNumber;
+    //}
+
+    //Getters
     public String getTitle(){
         return this.title;
     }
 
+    public String getRenterName(){
+        return this.renterName;
+    }
+
+    public String getRenterID(){
+        return this.renterID;
+    }
+
+    public Date getCheckoutDate(){
+        return this.checkoutDate;
+    }
+
+    public boolean getIsCheckedOut(){
+        return this.isCheckedOut;
+    }
     public Date getPubDate() {
         return this.publicationDate;
     }
@@ -45,8 +89,46 @@ public class Collection {
         return this.price;
     }
 
+    //Setters
+
+    public void setPrice(double d){
+        this.price = d;
+    }
+
+    public void setCheckoutDate(Date d){
+        this.checkoutDate = d;
+    }
+
+    public void setRenterName(String s){
+        this.renterName = s;
+    }
+
+    public void setRenterID(String s){
+        this.renterID = s;
+    }
+
+    public void setCheckedOut(boolean isCheck){
+        this.isCheckedOut = isCheck;
+    }
+
+    public void setAuthor(String s){
+        this.author = s;
+    }
+
+    public void setSection(String s){
+        this.section = s;
+    }
+
+    public void setPublicationDate(Date d){
+        this.publicationDate = d;
+    }
+
+    public void setTitle(String s){
+        this.title = s;
+    }
+
     public void saveTo(String file)
     {
-
+        //idk what this is for
     }
 }

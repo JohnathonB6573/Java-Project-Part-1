@@ -7,17 +7,21 @@ public class Borrowcollection {
      */
     protected String borrowCollection;
 
-    public String borrowCollection(String collectionNumber){
-        if(collectionNumber.toCharArray().length<=6){
+    public String borrowCollection(String collectionNumber) {
+        if (collectionNumber.toCharArray().length <= 6) {
             this.borrowCollection = collectionNumber;
         }
         else
-            System.out.println("Invalid");
-    }
-    public String getISBN() {
+            System.out.println("invalid collection Number");
         return this.borrowCollection;
     }
-    public void printBorrowedISBN() {
-        System.out.println(this.borrowCollection);
-    }
 }
+/*
+        public String getISBN(){
+            return this.borrowCollection;
+        }
+        public void printBorrowedISBN(){
+            System.out.println(this.borrowCollection);
+        }
+    }
+*/

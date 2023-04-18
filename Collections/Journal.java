@@ -5,14 +5,19 @@ public class Journal extends Collection{
     protected String ISSN;
 
     public Journal(){
-        this.idNumber = "";
+        //this.idNumber = "";
         this.publicationDate = new Date("00/00/0000");
         this.section = "";
         this.author = "";
         this.price = 0.0;
+        this.title = "";
+        this.ISSN = "";
+        this.renterName = "";
+        this.renterID = "";
+        this.checkoutDate = new Date("00/00/0000");
     }
 
-    public Journal(String id, String ISSN, String title, String publicationDate, String section, String author, Double price)
+    public Journal(String ISSN, String title, String publicationDate, String section, String author, Double price)
     {
         this.ISSN = ISSN;
         this.title = title;
@@ -20,12 +25,16 @@ public class Journal extends Collection{
         this.section = section;
         this.author = author;
         this.price = price;
-
-        setID(id);
+        this.renterName = "";
+        this.renterID = "";
+        this.checkoutDate = new Date("00/00/0000");
     }
 
     String getISSN(){
         return this.ISSN;
+    }
+    public void setISSN(String issn){
+        this.ISSN = issn;
     }
     
 }

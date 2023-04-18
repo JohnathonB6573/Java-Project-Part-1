@@ -1,7 +1,7 @@
 import People.*;
 import Other.*;
 import Collections.*;
-import LibarySystem.*;
+//import LibarySystem.*;
 import java.io.*;
 import java.nio.file.Paths;
 import java.util.Arrays;
@@ -51,7 +51,7 @@ class ProjectMain{
         String membershipType = scn.nextLine();
 
         System.out.print("Creating a new member...");
-        Member mem = new Member(name, address, email, ssn, date, membershipType);
+        Member mem = new Member(name,id,address, email, ssn, date, membershipType);
 
         System.out.print("The membership ID is: "+mem.getID());
         //Save the new member into the membership database
@@ -89,7 +89,7 @@ class ProjectMain{
                 System.out.print("Enter Book Price: ");
                 Double bookPrice = scn.nextDouble();
 
-                Book book = new Book(bookID, bookISBN, bookName, bookPublication, bookSection, bookAuthor, bookPrice);
+                Book book = new Book(bookISBN, bookName, bookPublication, bookSection, bookAuthor, bookPrice);
 
                 book.saveTo("bookDatabaseFile.txt");
                 System.out.println("\nNew Book Successfully Saved to file.");
@@ -116,7 +116,7 @@ class ProjectMain{
                 System.out.print("Enter DVD Price: ");
                 Double dvdPrice = scn.nextDouble();
 
-                DVD dvd = new DVD(dvdID, dvdISBN, dvdName, dvdPublication, dvdSection, dvdAuthor, dvdPrice);
+                DVD dvd = new DVD(dvdISBN, dvdName, dvdPublication, dvdSection, dvdAuthor, dvdPrice);
 
                 dvd.saveTo("collectionDatabaseFile.txt");
                 System.out.println("\nNew DVD Successfully Saved to file.");
@@ -143,7 +143,7 @@ class ProjectMain{
                 System.out.print("Enter Journal Price: ");
                 Double journalPrice = scn.nextDouble();
 
-                Journal journal = new Journal(journalID, journalISBN, journalName, journalPublication, journalSection, journalAuthor, journalPrice);
+                Journal journal = new Journal(journalISBN, journalName, journalPublication, journalSection, journalAuthor, journalPrice);
 
                 journal.saveTo("collectionDatabaseFile.txt");
                 System.out.println("\nNew Journal Successfully Saved to file.");
@@ -170,7 +170,7 @@ class ProjectMain{
                 System.out.print("Enter Newspaper Price: ");
                 Double newspaperPrice = scn.nextDouble();
 
-                Newspaper newspaper = new Newspaper(newspaperID, newspaperISBN, newspaperName, newspaperPublication, newspaperSection, newspaperAuthor, newspaperPrice);
+                Newspaper newspaper = new Newspaper(newspaperISBN, newspaperName, newspaperPublication, newspaperSection, newspaperAuthor, newspaperPrice);
 
                 newspaper.saveTo("collectionDatabaseFile.txt");
                 System.out.println("\nNew Newspaper Successfully Saved to file.");
@@ -195,8 +195,14 @@ class ProjectMain{
     //You are free to implememnt other events that you see needs to be implemented
 
     public static void main(String [] args){
+        /*
+        steps that the main is going to do:
+        ask for a name and id number inorder to login (we are going to searilize the differnt id numbers, names, and other people variables)
+        specifiic dialog pops up depening on what job the person has
+        they would go through the different options and after a task is complete would exit out of the database
+         */
         ProjectMain.mainMenu();
-
+        System.out.println("Enter your username to login:");
         System.out.print("Enter your option number: ");
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
