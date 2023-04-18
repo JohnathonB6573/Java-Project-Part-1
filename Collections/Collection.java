@@ -1,6 +1,7 @@
 package Collections;
 
-import Other.Date;
+import java.util.*;
+import java.text.*;
 
 public class Collection {
 
@@ -15,14 +16,14 @@ public class Collection {
     //Default Constructor
     Collection(){
         this.title = " ";
-        this.publicationDate = new Date("00/00/0000");
+        this.publicationDate = new Date();
         this.section = " ";
         this.author = " ";
         this.price = 0;
         this.isCheckedOut = false;
         this.renterName = "";
         this.renterID = "";
-        this.checkoutDate = new Date("00/00/0000");
+        this.checkoutDate = new Date();
     }
 
     //Constructor
@@ -35,7 +36,7 @@ public class Collection {
         this.isCheckedOut = false;
         this.renterName = "";
         this.renterID = "";
-        this.checkoutDate = new Date("00/00/0000");
+        this.checkoutDate = new Date();
     }
 
     //public void setID(String id) {
@@ -55,6 +56,18 @@ public class Collection {
     //Getters
     public String getTitle(){
         return this.title;
+    }
+
+    public String getRenterName(){
+        return this.renterName;
+    }
+
+    public String getRenterID(){
+        return this.renterID;
+    }
+
+    public Date getCheckoutDate(){
+        return this.checkoutDate;
     }
 
     public boolean getIsCheckedOut(){
@@ -80,6 +93,18 @@ public class Collection {
 
     public void setPrice(double d){
         this.price = d;
+    }
+
+    public void setCheckoutDate(Date d){
+        this.checkoutDate = d;
+    }
+
+    public void setRenterName(String s){
+        this.renterName = s;
+    }
+
+    public void setRenterID(String s){
+        this.renterID = s;
     }
 
     public void setCheckedOut(boolean isCheck){
