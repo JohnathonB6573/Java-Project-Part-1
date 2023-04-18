@@ -39,7 +39,7 @@ public class Librarian extends Employee{
     //Stop membership
     //Check out books this will assign books to people
     public void checkoutBook(Book b, Person p){
-        b.setRenterId(p.getID());
+        b.setRenterID(p.getId());
         b.setRenterName(p.getName());
         Date date = new Date();
         b.setCheckoutDate(formatter.format(date))

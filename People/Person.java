@@ -55,7 +55,7 @@ class Person {
 	public String getName() {
 		return name;
 	}
-	public String setId(){return id;}
+	public String getId(){return id;}
 	
 	public String getAddress() {
 		return address;
