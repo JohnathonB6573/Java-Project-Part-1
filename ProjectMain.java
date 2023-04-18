@@ -161,7 +161,7 @@ class ProjectMain{
                 System.out.print("Enter Newspaper ISBN: ");
                 String newspaperISBN = scn.nextLine();
 
-                System.out.print("Enter Newspaperl Publication Date: ");
+                System.out.print("Enter Newspaper Publication Date: ");
                 String newspaperPublication = scn.nextLine();
 
                 System.out.print("Enter Newspaper Section: ");
@@ -185,7 +185,10 @@ class ProjectMain{
         
     };
     public static void newRemoveCollectionEvent(){};
-    public static void newEmployeeEvent(){};
+
+    public static void newEmployeeEvent(){
+
+    };
     public static void newBorrowsEvent(){};
     public static void newReturnEvent(){};
     public static void newCheckOverdues(){};
