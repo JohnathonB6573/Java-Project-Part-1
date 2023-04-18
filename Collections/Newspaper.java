@@ -12,6 +12,9 @@ public class Newspaper extends Collection{
         this.price = 0.0;
         this.title = "";
         this.ISSN = "";
+        this.renterName = "";
+        this.renterID = "";
+        this.checkoutDate = new Date("00/00/0000");
     }
 
     public Newspaper(String ISSN, String title, String publicationDate, String section, String author, Double price)
@@ -22,6 +25,9 @@ public class Newspaper extends Collection{
         this.section = section;
         this.author = author;
         this.price = price;
+        this.renterName = "";
+        this.renterID = "";
+        this.checkoutDate = new Date("00/00/0000");
     }
 
     String getISSN(){

@@ -12,6 +12,9 @@ public class Book extends Collection {
         this.section = "";
         this.author = "";
         this.price = 0.0;
+        this.renterName = "";
+        this.renterID = "";
+        this.checkoutDate = new Date("00/00/0000");
     }
 
     public Book(String ISBN, String title, String publicationDate, String section, String author, Double price)
@@ -22,6 +25,9 @@ public class Book extends Collection {
         this.section = section;
         this.author = author;
         this.price = price;
+        this.renterName = "";
+        this.renterID = "";
+        this.checkoutDate = new Date("00/00/0000");
     }
 
     public String getISBN(){

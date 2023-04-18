@@ -6,8 +6,8 @@ public class Collection {
 
     //protected String idNumber;
     protected String title;
-    protected Date publicationDate;
-    protected String section, author;
+    protected Date publicationDate, checkoutDate;
+    protected String section, author, renterName, renterID;
     protected double price;
 
     protected boolean isCheckedOut;
@@ -20,6 +20,9 @@ public class Collection {
         this.author = " ";
         this.price = 0;
         this.isCheckedOut = false;
+        this.renterName = "";
+        this.renterID = "";
+        this.checkoutDate = new Date("00/00/0000");
     }
 
     //Constructor
@@ -30,6 +33,9 @@ public class Collection {
         this.author = author;
         this.price = price;
         this.isCheckedOut = false;
+        this.renterName = "";
+        this.renterID = "";
+        this.checkoutDate = new Date("00/00/0000");
     }
 
     //public void setID(String id) {
