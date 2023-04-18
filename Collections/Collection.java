@@ -2,6 +2,10 @@ package Collections;
 
 import java.util.*;
 import java.text.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 
 public class Collection {
 
@@ -129,6 +133,13 @@ public class Collection {
 
     public void saveTo(String file)
     {
-        //idk what this is for
+        PrintWriter writer = new PrintWriter(new File(file));
+        writer.write("Collection Type: " + this.);
+        writer.write("ISBN/ISSN: " + this.);
+        writer.write("Section: " + this.section);
+        writer.write("Publication Date: " + this.publicationDate);
+        writer.write("Author: " + this.author;
+        writer.write("DOB: " + this.dob);
+        writer.write("Balance " + this.balance + "\n");
     }
 }
