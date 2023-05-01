@@ -1,5 +1,9 @@
 package People;
 import Other.*;
+import java.io.File;
+import java.io.PrintWriter;
+import java.io.FileNotFoundException;
+
 
 
 
@@ -64,9 +68,15 @@ public class Member extends Person {
         
     }   
 
-    public void saveTo(String file){ //needs to be implemented to write member to database file
-
-        
+    public void saveTo(String file) throws FileNotFoundException{ //needs to be implemented to write member to database file
+        PrintWriter writer = new PrintWriter(new File(file));
+        writer.write("Id: " + this.id);
+        writer.write("Name: " + this.name);
+        writer.write("Address " + this.address);
+        writer.write("Email: " + this.email);
+        writer.write("SSN: " + this.ssn);
+        writer.write("DOB: " + this.dob);
+        writer.write("Balance " + this.balance + "\n");
     }
     //All members should be able to request collections, get information about collections, check overdue books, and pay fees.
     

@@ -1,5 +1,6 @@
 package People;
 import Other.*;
+import Collections.*;
 public class Librarian extends Employee{
     Librarian(){
         id = 0;
@@ -22,13 +23,13 @@ public class Librarian extends Employee{
         super.setID(e.getID());
     }
 
-
-    //Search collection by idNumber
+    //Search collection by issn
     //Search checked out collections
     //search checked in collections
     //Search collection by title
     //Search collections by author
     //Search collection by price
+
     //Search for fiction or non-fiction
     //Search by section
     //Search by publicationDate
@@ -37,4 +38,10 @@ public class Librarian extends Employee{
     //Implement a new membership
     //Stop membership
     //Check out books this will assign books to people
+    public void checkoutBook(Book b, Person p){
+        b.setRenterID(p.getId());
+        b.setRenterName(p.getName());
+        Date date = new Date();
+        b.setCheckoutDate(formatter.format(date))
+    }
 }

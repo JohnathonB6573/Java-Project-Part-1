@@ -1,6 +1,11 @@
 package Collections;
 
-import Other.Date;
+import java.util.*;
+import java.text.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 
 public class Collection {
 
@@ -15,14 +20,14 @@ public class Collection {
     //Default Constructor
     Collection(){
         this.title = " ";
-        this.publicationDate = new Date("00/00/0000");
+        this.publicationDate = new Date();
         this.section = " ";
         this.author = " ";
         this.price = 0;
         this.isCheckedOut = false;
         this.renterName = "";
         this.renterID = "";
-        this.checkoutDate = new Date("00/00/0000");
+        this.checkoutDate = new Date();
     }
 
     //Constructor
@@ -35,7 +40,7 @@ public class Collection {
         this.isCheckedOut = false;
         this.renterName = "";
         this.renterID = "";
-        this.checkoutDate = new Date("00/00/0000");
+        this.checkoutDate = new Date();
     }
 
     //public void setID(String id) {
@@ -55,6 +60,18 @@ public class Collection {
     //Getters
     public String getTitle(){
         return this.title;
+    }
+
+    public String getRenterName(){
+        return this.renterName;
+    }
+
+    public String getRenterID(){
+        return this.renterID;
+    }
+
+    public Date getCheckoutDate(){
+        return this.checkoutDate;
     }
 
     public boolean getIsCheckedOut(){
@@ -82,6 +99,18 @@ public class Collection {
         this.price = d;
     }
 
+    public void setCheckoutDate(Date d){
+        this.checkoutDate = d;
+    }
+
+    public void setRenterName(String s){
+        this.renterName = s;
+    }
+
+    public void setRenterID(String s){
+        this.renterID = s;
+    }
+
     public void setCheckedOut(boolean isCheck){
         this.isCheckedOut = isCheck;
     }
@@ -104,6 +133,13 @@ public class Collection {
 
     public void saveTo(String file)
     {
-        //idk what this is for
+        PrintWriter writer = new PrintWriter(new File(file));
+        writer.write("Collection Type: " + this.);
+        writer.write("ISBN/ISSN: " + this.);
+        writer.write("Section: " + this.section);
+        writer.write("Publication Date: " + this.publicationDate);
+        writer.write("Author: " + this.author;
+        writer.write("DOB: " + this.dob);
+        writer.write("Balance " + this.balance + "\n");
     }
 }

@@ -71,9 +71,6 @@ class ProjectMain{
                 System.out.print("Enter Book Name: ");
                 String bookName = scn.nextLine();
 
-                System.out.print("Enter Unique Collection ID");
-                String bookID = scn.nextLine();
-
                 System.out.print("Enter Book Author: ");
                 String bookAuthor = scn.nextLine();
 
@@ -91,15 +88,12 @@ class ProjectMain{
 
                 Book book = new Book(bookISBN, bookName, bookPublication, bookSection, bookAuthor, bookPrice);
 
-                book.saveTo("bookDatabaseFile.txt");
+                book.saveTo("collectionDatabaseFile.txt");
                 System.out.println("\nNew Book Successfully Saved to file.");
                 break;
             case "DVD", "dvd":
                 System.out.print("Enter DVD Name: ");
                 String dvdName = scn.nextLine();
-
-                System.out.print("Enter Unique Collection ID");
-                String dvdID = scn.nextLine();
 
                 System.out.print("Enter DVD Author: ");
                 String dvdAuthor = scn.nextLine();
@@ -125,9 +119,6 @@ class ProjectMain{
                 System.out.print("Enter Journal Name: ");
                 String journalName = scn.nextLine();
 
-                System.out.print("Enter Unique Collection ID");
-                String journalID = scn.nextLine();
-
                 System.out.print("Enter Journal Author: ");
                 String journalAuthor = scn.nextLine();
 
@@ -152,16 +143,13 @@ class ProjectMain{
                 System.out.print("Enter Newspaper Name: ");
                 String newspaperName = scn.nextLine();
 
-                System.out.print("Enter Unique Collection ID");
-                String newspaperID = scn.nextLine();
-
                 System.out.print("Enter Newspaper Author: ");
                 String newspaperAuthor = scn.nextLine();
 
                 System.out.print("Enter Newspaper ISBN: ");
                 String newspaperISBN = scn.nextLine();
 
-                System.out.print("Enter Newspaperl Publication Date: ");
+                System.out.print("Enter Newspaper Publication Date: ");
                 String newspaperPublication = scn.nextLine();
 
                 System.out.print("Enter Newspaper Section: ");
@@ -185,7 +173,10 @@ class ProjectMain{
         
     };
     public static void newRemoveCollectionEvent(){};
-    public static void newEmployeeEvent(){};
+
+    public static void newEmployeeEvent(){
+
+    };
     public static void newBorrowsEvent(){};
     public static void newReturnEvent(){};
     public static void newCheckOverdues(){};
