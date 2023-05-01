@@ -69,4 +69,5 @@ public class Member extends Person {
         
     }
     //All members should be able to request collections, get information about collections, check overdue books, and pay fees.
+    
 }
