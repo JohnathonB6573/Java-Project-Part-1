@@ -1,5 +1,7 @@
 package People;
-import Other.*;
+import Other.SSN;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 
 
@@ -17,7 +19,7 @@ public class Member extends Person {
         address = "";
         email = "";
         ssn = new SSN("000-00-0000");
-		dob = new Date("00/00/0000");
+		dob = LocalDate.of(0000,0,0);
         id = "";
         //idCount++; //add one to id count after each member initialization
         numOfBooks = 0;
@@ -25,7 +27,7 @@ public class Member extends Person {
     }
 
 
-    public Member(String name,String id, String address,String email,SSN ssn,Date date, String membershipType)
+    public Member(String name,String id, String address,String email,SSN ssn,LocalDate date, String membershipType)
     {
         this.id = id; //member given unique ID
         //idCount++; //add one to id count after each member initialization
@@ -59,7 +61,7 @@ public class Member extends Person {
         System.out.println("Address: "+ getAddress());
         System.out.println("Email: "+ getEmail());
         System.out.println("SSN: "+ getSSN1());
-        System.out.println("Dob: "+ getDate1());
+        System.out.println("Dob: "+ getDOB());
         System.out.println("Balance:"+ getBalance());
         
     }   

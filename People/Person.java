@@ -1,26 +1,28 @@
 package People;
-
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import Other.SSN;
-import Other.Date;
 
 class Person {
 	protected String name, address, email, id;
 	protected SSN ssn;
-	protected Date dob;
+	protected LocalDate dob;
 	protected float balance;
+
+	protected boolean hasMembership;
 	
 	Person(){//default constructor sets everything to 0 and blanks
 		name = "";
 		address = "";
 		email = "";
 		ssn = new SSN("000-00-0000");
-		dob = new Date("00/00/0000");
+		dob = LocalDate.of(0000, 0, 0);
 		balance = 0.0f;
 		id = "";
-
+		hasMembership = false;
 	}
 	
-	public Person(String name,String id, String address,String email,SSN ssn,Date date, float balance) {//sets the different variables
+	public Person(String name,String id, String address,String email,SSN ssn,LocalDate date, float balance) {//sets the different variables
 		this.name = name;
 		this.id = id;
 		this.address = address;
@@ -39,7 +41,7 @@ class Person {
 		this.address = address;
 	}
 	
-	public void setDate(Date date) {
+	public void setDOB(LocalDate date) {
 		this.dob = date;
 	}
 	
@@ -55,19 +57,15 @@ class Person {
 	public String getName() {
 		return name;
 	}
-	public String setId(){return id;}
+	public String getID(){return id;}
 	
 	public String getAddress() {
 		return address;
 	}
 	public float getBalance(){return balance;}
 	
-	public Date getDate() {
+	public LocalDate getDOB() {
 		return dob;
-	}
-	
-	public String getDate1() {
-		return dob.getDate();
 	}
 	
 	public String getEmail() {
@@ -81,12 +79,17 @@ class Person {
 	public String getSSN1() {
 		return ssn.getData();
 	}
-	
-	public Person getPeople() {
-		return this;
+
+	public void SetMembershipStatus(boolean b){
+		this.hasMembership = b;
+	}
+
+	public boolean SeeMembershipStatus(){
+		return hasMembership;
 	}
 	
-	public static void main(String[] args) {
-		
-	}
+	//public Person getPeople() {
+		//return this;
+	//}
+
 }

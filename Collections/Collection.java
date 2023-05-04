@@ -1,33 +1,31 @@
 package Collections;
+import java.time.LocalDate;
 
-import java.util.*;
-import java.text.*;
 
 public class Collection {
 
     //protected String idNumber;
     protected String title;
-    protected Date publicationDate, checkoutDate;
+    protected LocalDate publicationDate, checkoutDate;
     protected String section, author, renterName, renterID;
     protected double price;
-
     protected boolean isCheckedOut;
 
     //Default Constructor
     Collection(){
         this.title = " ";
-        this.publicationDate = new Date();
+        this.publicationDate = LocalDate.of(0000,0,0);
         this.section = " ";
         this.author = " ";
         this.price = 0;
         this.isCheckedOut = false;
         this.renterName = "";
         this.renterID = "";
-        this.checkoutDate = new Date();
+        this.checkoutDate = LocalDate.of(0000,0,0);
     }
 
     //Constructor
-    Collection(String title,Date publicationDate,String section,String author, double price){
+    Collection(String title,LocalDate publicationDate,String section,String author, double price){
         this.title = title;
         this.publicationDate = publicationDate;
         this.section = section;
@@ -36,7 +34,7 @@ public class Collection {
         this.isCheckedOut = false;
         this.renterName = "";
         this.renterID = "";
-        this.checkoutDate = new Date();
+        this.checkoutDate = LocalDate.of(0000,0,0);
     }
 
     //public void setID(String id) {
@@ -66,14 +64,14 @@ public class Collection {
         return this.renterID;
     }
 
-    public Date getCheckoutDate(){
+    public LocalDate getCheckoutDate(){
         return this.checkoutDate;
     }
 
     public boolean getIsCheckedOut(){
         return this.isCheckedOut;
     }
-    public Date getPubDate() {
+    public LocalDate getPubDate() {
         return this.publicationDate;
     }
 
@@ -95,7 +93,7 @@ public class Collection {
         this.price = d;
     }
 
-    public void setCheckoutDate(Date d){
+    public void setCheckoutDate(LocalDate d){
         this.checkoutDate = d;
     }
 
@@ -119,7 +117,7 @@ public class Collection {
         this.section = s;
     }
 
-    public void setPublicationDate(Date d){
+    public void setPublicationDate(LocalDate d){
         this.publicationDate = d;
     }
 

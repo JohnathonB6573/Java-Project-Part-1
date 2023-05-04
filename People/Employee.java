@@ -1,12 +1,11 @@
 package People;
 
 public class Employee extends Person{
-	protected int id;
 	protected float salary;
 
 	Employee(){
-        id = 0;
         salary = 0;
+        id = "";
     }
 
 	public Employee(Person p) {
@@ -14,16 +13,13 @@ public class Employee extends Person{
         super.setAddress(p.getAddress());
         super.setEmail(p.getEmail());
         super.setSSN(p.getSSN());
-        super.setDate(p.getDate());
+        super.setDOB(p.getDOB());
         super.setBalance(p.getBalance());
+        salary = 0;
 	}
 	
-	public void setID(int id){
+	public void setID(String id){
         this.id=id;
-    }
-
-    public int getID(){
-        return id;
     }
 
     public void setSalary(int salary){
@@ -39,7 +35,7 @@ public class Employee extends Person{
         System.out.println("Address: "+ getAddress());
         System.out.println("Email: "+ getEmail());
         System.out.println("SSN: "+ getSSN1());
-        System.out.println("Dob: "+ getDate1());
+        System.out.println("Dob: "+ getDOB());
         System.out.println("Balance:"+ getBalance());
     }
 }
