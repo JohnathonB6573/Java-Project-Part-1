@@ -7,7 +7,7 @@ public class Collection {
     //protected String idNumber;
     protected String title;
     protected LocalDate publicationDate, checkoutDate;
-    protected String section, author, renterName, renterID;
+    protected String section, author, renterName, renterID, ISBN, ISSN;
     protected double price;
     protected boolean isCheckedOut;
 
@@ -22,6 +22,8 @@ public class Collection {
         this.renterName = "";
         this.renterID = "";
         this.checkoutDate = LocalDate.of(0000,0,0);
+        this.ISBN = "";
+        this.ISSN = "";
     }
 
     //Constructor
@@ -35,6 +37,8 @@ public class Collection {
         this.renterName = "";
         this.renterID = "";
         this.checkoutDate = LocalDate.of(0000,0,0);
+        this.ISBN = "";
+        this.ISSN = "";
     }
 
     //public void setID(String id) {
@@ -123,6 +127,20 @@ public class Collection {
 
     public void setTitle(String s){
         this.title = s;
+    }
+
+    public String getISBN(){
+        return this.ISBN;
+    }
+    public void setISBN(String isbn){
+        this.ISBN = isbn;
+    }
+
+    public String getISSN(){
+        return this.ISSN;
+    }
+    public void setISSN(String issn){
+        this.ISSN = issn;
     }
 
     public void saveTo(String file)

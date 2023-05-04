@@ -32,12 +32,4 @@ public class DVD extends Collection {
         this.renterID = "";
         this.checkoutDate = LocalDate.of(0000,0,0);
     }
-
-    String getISBN(){
-        return this.ISBN;
-    }
-    public void setISBN(String isbn){
-        this.ISBN = isbn;
-    }
-    
 }
