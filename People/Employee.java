@@ -1,5 +1,9 @@
 package People;
 
+import Other.SSN;
+
+import java.time.LocalDate;
+
 public class Employee extends Person{
 	protected float salary;
 
@@ -17,12 +21,24 @@ public class Employee extends Person{
         super.setBalance(p.getBalance());
         salary = 0;
 	}
+
+    Employee(String name, String address, String email, SSN ssn,
+              LocalDate dob, float balance, float in_salary,String in_id){
+        super.setName(name);
+        super.setAddress(address);
+        super.setEmail(email);
+        super.setSSN(ssn);
+        super.setDOB(dob);
+        super.setBalance(balance);
+        salary = in_salary;
+        id = in_id;
+    }
 	
 	public void setID(String id){
         this.id=id;
     }
 
-    public void setSalary(int salary){
+    public void setSalary(float salary){
         this.salary=salary;
     }
 

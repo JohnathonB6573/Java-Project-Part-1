@@ -4,6 +4,8 @@ import Collections.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
+
 public class Librarian extends Employee{
     Librarian(){
         id = "";
@@ -24,6 +26,18 @@ public class Librarian extends Employee{
         super.setBalance(e.getBalance());
         super.setSalary((int)e.getSalary());
         super.setID(e.getID());
+    }
+
+    Librarian(String name, String address, String email, SSN ssn,
+              LocalDate dob,float balance, float salary, String id){
+        super.setName(name);
+        super.setAddress(address);
+        super.setEmail(email);
+        super.setSSN(ssn);
+        super.setDOB(dob);
+        super.setBalance(balance);
+        super.setSalary(salary);
+        super.setID(id);
     }
 
     //Returns the collection that matches the ISSN

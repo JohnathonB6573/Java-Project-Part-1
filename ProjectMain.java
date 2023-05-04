@@ -4,6 +4,7 @@ import Collections.*;
 //import LibarySystem.*;
 import java.io.*;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
@@ -175,6 +176,15 @@ class ProjectMain{
     public static void newRemoveCollectionEvent(){};
 
     public static void newEmployeeEvent(){
+        String Name, Address, Email, ID;
+        int dob_year, dob_month, dob_day;
+        SSN ssn;
+        float salary, balance;
+
+        Employee John = new Employee(
+                Name, Address, Email, ssn, LocalDate.of(dob_year,
+                dob_month,dob_day),
+                balance, salary, ID);
 
     };
     public static void newBorrowsEvent(/*ArrayList<Collection> Collections, Person p*/){
@@ -189,13 +199,9 @@ class ProjectMain{
     //You are free to implememnt other events that you see needs to be implemented
 
     public static void main(String [] args){
-        /*
-        steps that the main is going to do:
-        ask for a name and id number inorder to login (we are going to searilize the differnt id numbers, names, and other people variables)
-        specifiic dialog pops up depening on what job the person has
-        they would go through the different options and after a task is complete would exit out of the database
-         */
+
         ProjectMain.mainMenu();
+        //Initialization
         ArrayList<Collection> Collections;
 
         System.out.println("Enter your username to login:");
@@ -221,13 +227,13 @@ class ProjectMain{
                     ProjectMain.newEmployeeEvent();
                     break;
                 case 6:
-                    ProjectMain.newBorrowsEvent(Collections);
+                    ProjectMain.newBorrowsEvent();
                     break;
                 case 7:
-                    ProjectMain.newReturnEvent(Collections);
+                    ProjectMain.newReturnEvent();
                     break;
                 case 8:
-                    ProjectMain.newCheckOverdues(Collections);
+                    ProjectMain.newCheckOverdues();
                     break;
                 case 9:
                     System.exit(0);
