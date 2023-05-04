@@ -290,7 +290,7 @@ class ProjectMain{
         John.checkoutCollection((Collections.get(John.searchTitle(Collections, Title))),
                 People.get(John.searchPeople(People, ID)));
     };
-    public static void newReturnEvent(ArrayList<Collection> Collections, ArrayList<Person> People){
+    public static void newReturnEvent(ArrayList<Collection> Collections){
         Librarian John = new Librarian();
         Scanner scanner = new Scanner(System.in);
         String Title = "", ID = "";
@@ -353,7 +353,7 @@ class ProjectMain{
                     ProjectMain.newBorrowsEvent(Collections, People);
                     break;
                 case 7:
-                    ProjectMain.newReturnEvent();
+                    ProjectMain.newReturnEvent(Collections);
                     break;
                 case 8:
                     ProjectMain.newCheckOverdues();
