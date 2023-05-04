@@ -177,9 +177,15 @@ class ProjectMain{
     public static void newEmployeeEvent(){
 
     };
-    public static void newBorrowsEvent(){};
-    public static void newReturnEvent(){};
-    public static void newCheckOverdues(){};
+    public static void newBorrowsEvent(/*ArrayList<Collection> Collections, Person p*/){
+        //Librarian.checkoutCollection(c,p);
+    };
+    public static void newReturnEvent(){
+
+    };
+    public static void newCheckOverdues(){
+        //return list of overdues
+    };
     //You are free to implememnt other events that you see needs to be implemented
 
     public static void main(String [] args){
@@ -190,6 +196,8 @@ class ProjectMain{
         they would go through the different options and after a task is complete would exit out of the database
          */
         ProjectMain.mainMenu();
+        ArrayList<Collection> Collections;
+
         System.out.println("Enter your username to login:");
         System.out.print("Enter your option number: ");
         Scanner scanner = new Scanner(System.in);
@@ -213,13 +221,13 @@ class ProjectMain{
                     ProjectMain.newEmployeeEvent();
                     break;
                 case 6:
-                    ProjectMain.newBorrowsEvent();
+                    ProjectMain.newBorrowsEvent(Collections);
                     break;
                 case 7:
-                    ProjectMain.newReturnEvent();
+                    ProjectMain.newReturnEvent(Collections);
                     break;
                 case 8:
-                    ProjectMain.newCheckOverdues();
+                    ProjectMain.newCheckOverdues(Collections);
                     break;
                 case 9:
                     System.exit(0);

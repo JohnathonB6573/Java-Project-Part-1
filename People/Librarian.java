@@ -26,16 +26,48 @@ public class Librarian extends Employee{
         super.setID(e.getID());
     }
 
-    public void searchISSN(ArrayList<Collection> Collections,String ISSN){
+    //Returns the collection that matches the ISSN
+    public Collection searchISSN(ArrayList<Collection> Collections,String ISSN){
+        boolean hasISSN = false;
+        int i=0;
+
         if(Collections.isEmpty()){
-            System.out.println("Nothing in Collections");
+            System.out.println("There is nothing inside Collection.");
         }
         while(Collections != null){
-            //    if(Collections.getIssn() == ISSN)
-             //   print error
+               if(Collections.get(i).getISSN() == ISSN){
+                 i++;
+                 hasISSN = true;
+               }
+               return Collections.get(i);
             }
+        if(hasISSN = false){
+            System.out.println("We currently do not have a collection that has the ISSN of " + ISSN);
         }
-    //Search collection by issn
+        return null;
+        }
+
+    //Returns the collection that matches the ISSN
+    public Collection searchISBN(ArrayList<Collection> Collections,String ISBN){
+        boolean hasISBN = false;
+        int i=0;
+
+        if(Collections.isEmpty()){
+            System.out.println("There is nothing inside Collection.");
+        }
+        while(Collections != null){
+            if(Collections.get(i).getISSN() == ISBN){
+                hasISBN = true;
+                i++;
+            }
+            return Collections.get(i);
+        }
+        if(hasISBN = false){
+            System.out.println("We currently do not have a collection that has the ISSN of " + ISBN);
+        }
+        return null;
+    }
+
     //Search checked out collections
     //search checked in collections
     //Search collection by title
@@ -58,10 +90,17 @@ public class Librarian extends Employee{
         p.SetMembershipStatus(true);
     }
 
-    //Check out books this will assign books to people
-    public void checkoutBook(Book b, Person p){
-        b.setRenterID(p.getID());
-        b.setRenterName(p.getName());
-        b.setCheckoutDate(LocalDate.now());
+    //Check out books this will assign Collections to people
+    public void checkoutCollection(Collection c, Person p){
+        c.setRenterID(p.getID());
+        c.setRenterName(p.getName());
+        c.setCheckoutDate(LocalDate.now());
+    }
+
+    //Check out books this will unassign collections to people
+    public void checkinCollection(Collection c){
+        c.setRenterID("");
+        c.setRenterName("");
+        c.setCheckoutDate(LocalDate.of(0000,00,00));
     }
 }

@@ -31,13 +31,4 @@ public class Book extends Collection {
         this.checkoutDate = LocalDate.of(0000,0,0);
     }
 
-    public String getISBN(){
-        return this.ISBN;
-    }
-    public void setISBN(String isbn){
-        this.ISBN = isbn;
-    }
-
-
-
 }
