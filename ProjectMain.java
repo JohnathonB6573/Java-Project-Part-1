@@ -21,7 +21,7 @@ class ProjectMain{
         System.out.println("5. New Employee");
         System.out.println("6. Borrow Item");
         System.out.println("7. Return Item");
-        System.out.println("8. Check overdues");
+        System.out.println("8. Check overdue books");
         System.out.println("9. Quit");
         System.out.println("");
     }
