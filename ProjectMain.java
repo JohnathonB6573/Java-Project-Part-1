@@ -176,15 +176,89 @@ class ProjectMain{
     public static void newRemoveCollectionEvent(){};
 
     public static void newEmployeeEvent(){
-        String Name, Address, Email, ID;
-        int dob_year, dob_month, dob_day;
+        String Name = null, Address = null, Email = null , ID = null;
+        int dob_year = 0, dob_month = 0, dob_day = 0;
         SSN ssn;
-        float salary, balance;
+        float salary = 0;
+        Scanner scanner = new Scanner(System.in);
 
-        Employee John = new Employee(
-                Name, Address, Email, ssn, LocalDate.of(dob_year,
-                dob_month,dob_day),
-                balance, salary, ID);
+        //Ask for inputs
+        try {
+            System.out.println("Please enter your name: ");
+            Name = scanner.nextLine();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be a string.");
+            System.out.println();
+        }
+
+        try {
+            System.out.println("Please enter your Address: ");
+            Address = scanner.nextLine();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be a string.");
+            System.out.println();
+        }
+
+        try {
+            System.out.println("Please enter your Email: ");
+            Email = scanner.nextLine();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be a string.");
+            System.out.println();
+        }
+
+        try {
+            System.out.println("Please enter your ID: ");
+            ID = scanner.nextLine();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be a string.");
+            System.out.println();
+        }
+
+        try {
+            System.out.println("Please enter your birth year: ");
+            dob_year = scanner.nextInt();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be an integer.");
+            System.out.println();
+        }
+
+        try {
+            System.out.println("Please enter your birth month: ");
+            dob_month = scanner.nextInt();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be an integer.");
+            System.out.println();
+        }
+
+        try {
+            System.out.println("What day of the month were you born on: ");
+            dob_day = scanner.nextInt();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be an integer.");
+            System.out.println();
+        }
+
+       /* try {
+            System.out.println("Please enter your SSN in this format 000-00-0000: ");
+            SSN = scanner.nextLine();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be an integer.");
+            System.out.println();
+        }*/
+
+        try {
+            System.out.println("What is your hourly salary: ");
+            salary = scanner.nextFloat();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be an Float.");
+            System.out.println();
+        }
+
+
+        Employee name = new Employee(Name, Address, Email, ssn,
+                LocalDate.of(dob_year, dob_month,dob_day),
+                0, salary, ID);
 
     };
     public static void newBorrowsEvent(/*ArrayList<Collection> Collections, Person p*/){

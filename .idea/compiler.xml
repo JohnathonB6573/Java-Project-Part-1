@@ -9,8 +9,5 @@
         <module name="FxLibarySystem" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="FxLibarySystem" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>
