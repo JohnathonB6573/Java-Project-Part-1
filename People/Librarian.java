@@ -39,7 +39,7 @@ public class Librarian extends Employee{
         super.setSalary(salary);
         super.setID(id);
     }
-
+/*
     //Returns the collection that matches the ISSN
     public Collection searchISSN(ArrayList<Collection> Collections,String ISSN){
         boolean hasISSN = false;
@@ -72,7 +72,6 @@ public class Librarian extends Employee{
         while(Collections != null){
             if(Collections.get(i).getISSN() == ISBN){
                 hasISBN = true;
-                i++;
             }
             return Collections.get(i);
         }
@@ -80,7 +79,7 @@ public class Librarian extends Employee{
             System.out.println("We currently do not have a collection that has the ISSN of " + ISBN);
         }
         return null;
-    }
+    }*/
 
     //Search checked out collections
     //search checked in collections
@@ -120,8 +119,10 @@ public class Librarian extends Employee{
         }
 
         while(Collections != null){
-                if(Collections.get(x).getTitle() == Title)
+                if(Collections.get(x).getTitle() == Title) {
                     return x;
+                }
+                x++;
         }
         return 0;
     }
@@ -130,14 +131,41 @@ public class Librarian extends Employee{
         int x = 0;
 
         if(People.isEmpty()){
-            System.out.println("There is nothing inside Collection.");
+            System.out.println("There is nothing inside People.");
         }
 
         while(People != null){
-            if(People.get(x).getID() == ID)
-                return x;
+            if(People.get(x).getID() == ID){
+                return x;}
+            x++;
         }
         return 0;
+    }
+
+    public void returnOverdues(ArrayList<Collection> Collections){
+        int x = 0, i = 0;
+        ArrayList<Collection> Overdue = new ArrayList<>();
+
+        if(Collections.isEmpty()){
+            System.out.println("There is nothing inside Collection.");
+        }
+
+        while(Collections != null) {
+            if(Collections.get(x).getOverdue() == true){
+                Overdue.add(Collections.get(x));
+            }
+            x++;
+        }
+
+        if(Overdue.isEmpty()){
+            System.out.println("There are no overdue collections.");
+        }
+        else{
+            while(Overdue != null){
+                Overdue.get(i).print();
+                i++;
+            }
+        }
     }
 
     //Check out books this will unassign collections to people

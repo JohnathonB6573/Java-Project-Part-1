@@ -315,8 +315,10 @@ class ProjectMain{
         John.checkinCollection(Collections.get(John.searchTitle(Collections, Title)));
 
     };
-    public static void newCheckOverdues(){
-        //return list of overdues
+    public static void newCheckOverdues(ArrayList<Collection> Collections){
+        Librarian John = new Librarian();
+        John.returnOverdues(Collections);
+
     };
     //You are free to implememnt other events that you see needs to be implemented
 
@@ -348,12 +350,15 @@ class ProjectMain{
                     break;
                 case 5:
                     ProjectMain.newEmployeeEvent(People);
+                    //finished just need ssn to work
                     break;
                 case 6:
                     ProjectMain.newBorrowsEvent(Collections, People);
+                    //finished
                     break;
                 case 7:
                     ProjectMain.newReturnEvent(Collections);
+                    //finished
                     break;
                 case 8:
                     ProjectMain.newCheckOverdues();

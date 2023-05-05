@@ -9,7 +9,7 @@ public class Collection {
     protected LocalDate publicationDate, checkoutDate;
     protected String section, author, renterName, renterID, ISBN, ISSN;
     protected double price;
-    protected boolean isCheckedOut;
+    protected boolean isCheckedOut, isOverdue;
 
     //Default Constructor
     Collection(){
@@ -24,6 +24,7 @@ public class Collection {
         this.checkoutDate = LocalDate.of(0000,0,0);
         this.ISBN = "";
         this.ISSN = "";
+        this.isOverdue = false;
     }
 
     //Constructor
@@ -39,22 +40,8 @@ public class Collection {
         this.checkoutDate = LocalDate.of(0000,0,0);
         this.ISBN = "";
         this.ISSN = "";
+        this.isOverdue = false;
     }
-
-    //public void setID(String id) {
-    //	try {
-	//		if(id.length()==6) {
-	//			this.idNumber = id;
-	//		}
-	//	} catch(Exception e) {
-	//		e.printStackTrace();
-	//	}
-    //}
-
-    //public String getID() {
-       // return this.idNumber;
-    //}
-
     //Getters
     public String getTitle(){
         return this.title;
@@ -146,5 +133,28 @@ public class Collection {
     public void saveTo(String file)
     {
         //idk what this is for
+    }
+
+    public boolean getOverdue(){
+        return this.isOverdue;
+    }
+
+    public void setOverdue(boolean b){
+        this.isOverdue = b;
+    }
+
+    public void print(){
+        System.out.println("Title = " + this.getTitle());
+        System.out.println("Publication Date = " + this.getPubDate());
+        System.out.println("Section = " + this.getSection());
+        System.out.println("Author = " + this.getAuthor());
+        System.out.println("Section = " + this.getPrice());
+        System.out.println("Section = " + this.getIsCheckedOut());
+        System.out.println("Section = " + this.getRenterName());
+        System.out.println("Section = " + this.getRenterID());
+        System.out.println("Section = " + this.getCheckoutDate());
+        System.out.println("Section = " + this.getISBN());
+        System.out.println("Section = " + this.getISSN());
+        System.out.println("Section = " + this.getOverdue());
     }
 }
