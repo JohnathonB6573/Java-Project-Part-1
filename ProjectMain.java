@@ -48,6 +48,9 @@ class ProjectMain{
         System.out.print("Enter Member SSN: ");
         SSN ssn = new SSN(scn.nextLine());
 
+        System.out.println("Enter an ID: ");
+        String id = scn.nextLine();
+
         System.out.print("Enter Membership type (Student/Professor/External): ");
         String membershipType = scn.nextLine();
 
@@ -334,17 +337,19 @@ class ProjectMain{
             switch (option) {
                 case 1:
                     ProjectMain.newMemberEvent();
+                    //need to convert date to date can see example in newemployee, needs to add to people
                     break;
                 case 2:
                     ProjectMain.newCollectionEvent();
+                    //book error, needs to add to array list collections
                     break;
                 case 3:
                     ProjectMain.newRemoveMemberEvent();
-                    //not finished
+                    //not finished, needs to remove from people
                     break;
                 case 4:
                     ProjectMain.newRemoveCollectionEvent();
-                    //Not finished
+                    //Not finished, needs to remove from collections
                     break;
                 case 5:
                     ProjectMain.newEmployeeEvent(People);
