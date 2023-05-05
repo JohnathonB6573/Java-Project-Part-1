@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Librarian extends Employee{
-    Librarian(){
+    public Librarian(){
         id = "";
         salary = 0;
         name = "";
@@ -109,6 +109,35 @@ public class Librarian extends Employee{
         c.setRenterID(p.getID());
         c.setRenterName(p.getName());
         c.setCheckoutDate(LocalDate.now());
+    }
+    //ArrayList<Collection> Collections, ArrayList<Person> People
+    //Returns the collection by Title
+    public int searchTitle(ArrayList<Collection> Collections,String Title){
+        int x = 0;
+
+        if(Collections.isEmpty()){
+            System.out.println("There is nothing inside Collection.");
+        }
+
+        while(Collections != null){
+                if(Collections.get(x).getTitle() == Title)
+                    return x;
+        }
+        return 0;
+    }
+
+    public int searchPeople(ArrayList<Person> People,String ID){
+        int x = 0;
+
+        if(People.isEmpty()){
+            System.out.println("There is nothing inside Collection.");
+        }
+
+        while(People != null){
+            if(People.get(x).getID() == ID)
+                return x;
+        }
+        return 0;
     }
 
     //Check out books this will unassign collections to people

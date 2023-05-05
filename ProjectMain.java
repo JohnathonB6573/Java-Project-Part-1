@@ -175,7 +175,7 @@ class ProjectMain{
     };
     public static void newRemoveCollectionEvent(){};
 
-    public static void newEmployeeEvent(){
+    public static void newEmployeeEvent(ArrayList<Person> People){
         String Name = null, Address = null, Email = null , ID = null;
         int dob_year = 0, dob_month = 0, dob_day = 0;
         SSN ssn;
@@ -255,16 +255,64 @@ class ProjectMain{
             System.out.println();
         }
 
+        scanner.close();
 
-        Employee name = new Employee(Name, Address, Email, ssn,
+
+        Employee employee = new Employee(Name, Address, Email, ssn,
                 LocalDate.of(dob_year, dob_month,dob_day),
                 0, salary, ID);
 
+        People.add(employee);
+
     };
-    public static void newBorrowsEvent(/*ArrayList<Collection> Collections, Person p*/){
-        //Librarian.checkoutCollection(c,p);
+    public static void newBorrowsEvent(ArrayList<Collection> Collections, ArrayList<Person> People){
+        Librarian John = new Librarian();
+        Scanner scanner = new Scanner(System.in);
+        String Title = "", ID = "";
+
+        try {
+            System.out.println("What is the title of the Collection: ");
+            Title = scanner.nextLine();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be an String.");
+            System.out.println();
+        }
+
+        try {
+            System.out.println("What is the ID of the customer: ");
+            ID = scanner.nextLine();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be an String.");
+            System.out.println();
+        }
+
+        scanner.close();
+        John.checkoutCollection((Collections.get(John.searchTitle(Collections, Title))),
+                People.get(John.searchPeople(People, ID)));
     };
-    public static void newReturnEvent(){
+    public static void newReturnEvent(ArrayList<Collection> Collections){
+        Librarian John = new Librarian();
+        Scanner scanner = new Scanner(System.in);
+        String Title = "", ID = "";
+
+        try {
+            System.out.println("What is the title of the Collection: ");
+            Title = scanner.nextLine();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be an String.");
+            System.out.println();
+        }
+
+        try {
+            System.out.println("What is the ID of the customer: ");
+            ID = scanner.nextLine();
+        }catch(Exception InputMismatchException){
+            System.out.println("Error: input must be an String.");
+            System.out.println();
+        }
+
+        scanner.close();
+        John.checkinCollection(Collections.get(John.searchTitle(Collections, Title)));
 
     };
     public static void newCheckOverdues(){
@@ -276,7 +324,8 @@ class ProjectMain{
 
         ProjectMain.mainMenu();
         //Initialization
-        ArrayList<Collection> Collections;
+        ArrayList<Collection> Collections = new ArrayList<>();
+        ArrayList<Person> People = new ArrayList<>();
 
         System.out.println("Enter your username to login:");
         System.out.print("Enter your option number: ");
@@ -298,13 +347,13 @@ class ProjectMain{
                     ProjectMain.newRemoveCollectionEvent();
                     break;
                 case 5:
-                    ProjectMain.newEmployeeEvent();
+                    ProjectMain.newEmployeeEvent(People);
                     break;
                 case 6:
-                    ProjectMain.newBorrowsEvent();
+                    ProjectMain.newBorrowsEvent(Collections, People);
                     break;
                 case 7:
-                    ProjectMain.newReturnEvent();
+                    ProjectMain.newReturnEvent(Collections);
                     break;
                 case 8:
                     ProjectMain.newCheckOverdues();

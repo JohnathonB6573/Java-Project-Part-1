@@ -3,7 +3,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import Other.SSN;
 
-class Person {
+public class Person {
 	protected String name, address, email, id;
 	protected SSN ssn;
 	protected LocalDate dob;
