@@ -361,7 +361,8 @@ class ProjectMain{
                     //finished
                     break;
                 case 8:
-                    ProjectMain.newCheckOverdues();
+                    ProjectMain.newCheckOverdues(Collections);
+                    //finished
                     break;
                 case 9:
                     System.exit(0);
