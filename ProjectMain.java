@@ -239,13 +239,9 @@ class ProjectMain{
             System.out.println();
         }
 
-       /* try {
-            System.out.println("Please enter your SSN in this format 000-00-0000: ");
-            SSN = scanner.nextLine();
-        }catch(Exception InputMismatchException){
-            System.out.println("Error: input must be an integer.");
-            System.out.println();
-        }*/
+
+        System.out.println("Please enter your SSN: ");
+        ssn = new SSN(scanner.nextLine());
 
         try {
             System.out.println("What is your hourly salary: ");
@@ -344,13 +340,15 @@ class ProjectMain{
                     break;
                 case 3:
                     ProjectMain.newRemoveMemberEvent();
+                    //not finished
                     break;
                 case 4:
                     ProjectMain.newRemoveCollectionEvent();
+                    //Not finished
                     break;
                 case 5:
                     ProjectMain.newEmployeeEvent(People);
-                    //finished just need ssn to work
+                    //finished
                     break;
                 case 6:
                     ProjectMain.newBorrowsEvent(Collections, People);

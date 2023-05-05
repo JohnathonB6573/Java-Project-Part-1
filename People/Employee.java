@@ -22,8 +22,8 @@ public class Employee extends Person{
         salary = 0;
 	}
 
-    Employee(String name, String address, String email, SSN ssn,
-              LocalDate dob, float balance, float in_salary,String in_id){
+    public Employee(String name, String address, String email, SSN ssn,
+                    LocalDate dob, float balance, float in_salary, String in_id){
         super.setName(name);
         super.setAddress(address);
         super.setEmail(email);
