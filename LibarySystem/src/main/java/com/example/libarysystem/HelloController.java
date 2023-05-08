@@ -17,10 +17,10 @@ import java.io.IOException;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private Label onExitButtonStage;
 
     @FXML
-    protected void onExitButtonStage(Stage exitStage)throws IOException {
+    protected void onExitButtonStage(Stage exitStage){
         exitStage.close();
     }
 }
