@@ -1,5 +1,6 @@
 package com.example.libarysystem;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,8 +20,8 @@ public class HelloController {
     @FXML
     private Label onExitButtonStage;
 
-    @FXML
-    protected void onExitButtonStage(Stage exitStage){
-        exitStage.close();
+
+    public void exitStage(ActionEvent actionEvent) {
+        Platform.exit();
     }
 }

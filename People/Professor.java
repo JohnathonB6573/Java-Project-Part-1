@@ -15,7 +15,7 @@ public class Professor extends Member {
         super.setAddress(m.getAddress());
         super.setEmail(m.getEmail());
         super.setSSN(m.getSSN());
-        super.setDate(m.getDate());
+        //super.setDate(m.getDate());
         super.setBalance(m.getBalance());
         super.setID(m.getID());
         super.setNumOfBooks(m.getNumOfBooks());

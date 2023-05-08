@@ -20,5 +20,5 @@
     <Button text="Return Item" maxWidth="Infinity"/>
     <Button text="Check Overdues" maxWidth="Infinity"/>
     <Button text="Edit Information" maxWidth="Infinity"/>
-    <Button text="Quit" maxWidth="Infinity"/>
+    <Button text="Quit" maxWidth="Infinity" mnemonicParsing="false" onAction="#exitStage"/>
 </VBox>
