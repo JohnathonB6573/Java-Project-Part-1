@@ -11,7 +11,7 @@
     </padding>
 
     <Label fx:id="welcomeText"/>
-    <Button text="New Membership" maxWidth="Infinity"/>
+    <Button text="New Membership" maxWidth="Infinity" mnemonicParsing="false" onAction="#newMember"/>
     <Button text="New Collection" maxWidth="Infinity"/>
     <Button text="Remove Membership" maxWidth="Infinity"/>
     <Button text="Remove Item from Collection" maxWidth="Infinity"/>

@@ -17,11 +17,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloController {
-    @FXML
-    private Label onExitButtonStage;
-
 
     public void exitStage(ActionEvent actionEvent) {
         Platform.exit();
+    }
+
+    public void newMember(ActionEvent actionEvent)throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("newMember.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 300, 400); // Update the scene size here
+        stage.setTitle("New Member Collection:");
+        stage.setScene(scene);
+        stage.show();
     }
 }
