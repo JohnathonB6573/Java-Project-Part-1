@@ -418,11 +418,11 @@ class ProjectMain{
                     //book error, needs to add to array list collections
                     break;
                 case 3:
-                    ProjectMain.newRemoveMemberEvent();
+                    ProjectMain.newRemoveMemberEvent(People);
                     //not finished, needs to remove from people
                     break;
                 case 4:
-                    ProjectMain.newRemoveCollectionEvent();
+                    ProjectMain.newRemoveCollectionEvent(Collections);
                     //Not finished, needs to remove from collections
                     break;
                 case 5:
