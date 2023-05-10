@@ -6,6 +6,7 @@ import java.io.*;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -172,10 +173,22 @@ class ProjectMain{
         
     };
 
-    public static void newRemoveMemberEvent(){
-
-        
+    public static void newRemoveMemberEvent(ArrayList<Person> People, String id){
+        Iterator<Person> iterator = People.iterator();
+        int member = 0;
+        while(iterator.hasNext()) {
+            if(iterator.next().getID().equals(id)) {
+                iterator.remove();
+                System.out.println("Member has successfully been removed")
+                member++;
+                break;
+            }
+        }
+        if(member == 0) {
+            System.out.println("Error: No member matches that id")
+        }
     };
+
     public static void newRemoveCollectionEvent(){};
 
     public static void newEmployeeEvent(ArrayList<Person> People){
