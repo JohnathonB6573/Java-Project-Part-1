@@ -6,6 +6,7 @@ import java.io.*;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -172,11 +173,84 @@ class ProjectMain{
         
     };
 
-    public static void newRemoveMemberEvent(){
+    public static void newRemoveMemberEvent(ArrayList<Person> People){
+        Iterator<Person> iterator = People.iterator();
+        Scanner scanner = new Scanner(System.in);
+        String idNumber = null;
+        Boolean success = false;
 
-        
+        try {
+            System.out.println("Enter the identification number of member: ");
+            idNumber = scanner.next();
+        } catch(Exception InputMismatchException) {
+            System.out.println("Error: input must be a string.");
+            System.out.println();
+        }
+
+        while(iterator.hasNext()) {
+            if(iterator.next().getID().equals(idNumber)) {
+                iterator.remove();
+                System.out.printf("%s has been removed.\n",iterator.next().getName());
+                success = true;
+                break;
+            }
+        }
+
+        if(!success) {
+            System.out.println("No member with that ID");
+        }
+
     };
-    public static void newRemoveCollectionEvent(){};
+
+    public static void newRemoveCollectionEvent(ArrayList<Collection> Collections){
+        Iterator<Collection> iterator = Collections.iterator();
+        Scanner scanner = new Scanner(System.in);
+        String type = null;
+        String id = null;
+        Boolean success = false;
+
+        try{
+            System.out.println("Enter the type of collection(Book/DVD/Journal/Newspaper): ")
+            type = scanner.next();
+
+            if(type.equals("Book") || type.equals("DVD")) {
+                System.out.println("Enter the ISBN: ")
+                id = scanner.next();
+            }
+
+            if(type.equals("Journal") || type.equals("Newspaper")) {
+                System.out.println("Enter the ISSN: ")
+                id = scanner.next();
+            }
+        } catch(Exception InputMismatchException) {
+            System.out.println("Error: input must be a string.");
+            System.out.println();
+        }
+
+        while(iterator.hasNext()) {
+
+            if(type.equals("Book") || type.equals("DVD")) {
+                if(iterator.next().getISBN().equals(id)) {
+                    iterator.remove();
+                    System.out.printf("%s has been successfully removed",iterator.next().getTitle());
+                    success = true;
+                }
+            }
+
+            if(type.equals("Journal") || type.equals("Newspaper")) {
+                if(iterator.next().getISSN().equals(id)) {
+                    iterator.remove();
+                    System.out.printf("%s has been successfully removed",iterator.next().getTitle());
+                    success = true;
+                }
+            }
+        }
+
+        if(!success) {
+            System.out.println("No collection item was found with that ISBN or ISSN number.");
+        }
+
+    };
 
     public static void newEmployeeEvent(ArrayList<Person> People){
         String Name = null, Address = null, Email = null , ID = null;
@@ -344,11 +418,11 @@ class ProjectMain{
                     //book error, needs to add to array list collections
                     break;
                 case 3:
-                    ProjectMain.newRemoveMemberEvent();
+                    ProjectMain.newRemoveMemberEvent(People);
                     //not finished, needs to remove from people
                     break;
                 case 4:
-                    ProjectMain.newRemoveCollectionEvent();
+                    ProjectMain.newRemoveCollectionEvent(Collections);
                     //Not finished, needs to remove from collections
                     break;
                 case 5:
