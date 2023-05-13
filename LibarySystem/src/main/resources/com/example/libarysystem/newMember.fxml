@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.libarysystem.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml">
+    <Label text="Name:"/>
+    <TextField fx:id="nameField"/>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="New Membership" maxWidth="Infinity" mnemonicParsing="false" onAction="#newMember"/>
-    <Button text="New Collection" maxWidth="Infinity"/>
-    <Button text="Remove Membership" maxWidth="Infinity"/>
-    <Button text="Remove Item from Collection" maxWidth="Infinity"/>
-    <Button text="New Employee" maxWidth="Infinity"/>
-    <Button text="Borrow Item" maxWidth="Infinity"/>
-    <Button text="Return Item" maxWidth="Infinity"/>
-    <Button text="Check Overdues" maxWidth="Infinity"/>
-    <Button text="Edit Information" maxWidth="Infinity"/>
-    <Button text="Quit" maxWidth="Infinity" mnemonicParsing="false" onAction="#exitStage"/>
+    <Label text="Date of Birth:"/>
+    <DatePicker fx:id="dobPicker"/>
+
+    <Label text="SSN:"/>
+    <TextField fx:id="ssnField"/>
+
+    <Label text="Email:"/>
+    <TextField fx:id="emailField"/>
+
+    <Label text="Address:"/>
+    <TextField fx:id="addressField"/>
+
+    <Button text="Submit" onAction="#handleSubmit"/>
 </VBox>

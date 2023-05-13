@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.remMemberControl">
+    <children>
+        <TextField fx:id="name" floatText="Please Enter The Member Name You Want To Remove:" layoutX="139.0" layoutY="150.0" prefHeight="27.0" prefWidth="366.0" style="-fx-background-color: #808080;" />
+        <Label layoutX="67.0" layoutY="154.0" prefHeight="18.0" prefWidth="50.0" text="Name:" />
+        <Label layoutX="67.0" layoutY="210.0" prefHeight="18.0" prefWidth="63.0" text="ID:" />
+        <TextField fx:id="address" floatText="Please Enter Member ID You Want To Remove" layoutX="142.0" layoutY="206.0" prefHeight="27.0" prefWidth="366.0" style="-fx-background-color: #808080;" />
+        <Button fx:id="saveButton" layoutX="142.0" layoutY="323.0" mnemonicParsing="false" text="Save" />
+        <Button layoutX="298.0" layoutY="323.0" mnemonicParsing="false" text="Reset" />
+        <Button layoutX="468.0" layoutY="323.0" mnemonicParsing="false" onAction="#memberQuit" text="Exit" />
+    </children>
+</AnchorPane>
